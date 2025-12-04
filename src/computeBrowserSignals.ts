@@ -1,3 +1,16 @@
+/**
+ * @fileoverview Browser signal collection orchestration
+ * 
+ * This module coordinates the collection of various browser and device signals
+ * from multiple sources (WebGL, WebGPU, audio, math, EME, performance timing, etc.)
+ * and aggregates them into a unified BrowserSignals object.
+ * 
+ * All signal collection is performed locally in the browser without making any
+ * network requests.
+ * 
+ * @module computeBrowserSignals
+ */
+
 import { BrowserSignals, PerformanceTimingInfo } from './types';
 import { getWebGlBasics, getWebGlExtensions } from './sources/webgl';
 import getWebGpuInfo from './sources/webgpu';
@@ -5,6 +18,12 @@ import getAudioFingerprint from './sources/audio';
 import getMathFingerprint from './sources/math';
 import getEmeInfo from './sources/eme';
 
+/**
+ * Safely attempts to access the global Navigator object.
+ * 
+ * @internal
+ * @returns {Navigator | undefined} The Navigator object, or undefined if unavailable.
+ */
 function getNavigatorSafe(): Navigator | undefined {
   try {
     return typeof navigator !== 'undefined' ? navigator : undefined;
@@ -13,6 +32,12 @@ function getNavigatorSafe(): Navigator | undefined {
   }
 }
 
+/**
+ * Safely attempts to access the global Window object.
+ * 
+ * @internal
+ * @returns {Window | undefined} The Window object, or undefined if unavailable.
+ */
 function getWindowSafe(): Window | undefined {
   try {
     return typeof window !== 'undefined' ? window : undefined;
@@ -21,6 +46,17 @@ function getWindowSafe(): Window | undefined {
   }
 }
 
+/**
+ * Measures the precision and baseline characteristics of the browser's
+ * performance.now() implementation.
+ * 
+ * Different browsers and configurations have different timing precision levels,
+ * which can serve as a fingerprinting signal. This function runs a large number
+ * of iterations to detect the minimum timing resolution.
+ * 
+ * @internal
+ * @returns {PerformanceTimingInfo | undefined} Timing precision data, or undefined if unavailable.
+ */
 function getPerformanceTiming(): PerformanceTimingInfo | undefined {
   try {
     const w = getWindowSafe() as any;
@@ -55,6 +91,27 @@ function getPerformanceTiming(): PerformanceTimingInfo | undefined {
  * Collects the minimal set of browser signals required to build the anchor
  * used for the client-side visitorId. All work is performed locally in the
  * browser; no network calls are made.
+ * 
+ * This function coordinates the collection of signals from multiple sources:
+ * - User-Agent, hardware concurrency, device memory from Navigator
+ * - WebGL basics (version, vendor, renderer)
+ * - WebGL extensions and parameters
+ * - WebGPU capability information
+ * - Audio fingerprint (or a lazy function to compute it)
+ * - Math fingerprint based on floating-point operations
+ * - EME (Encrypted Media Extensions) support
+ * - Performance timing precision characteristics
+ * 
+ * @returns {Promise<BrowserSignals>} A promise that resolves to the collected browser signals.
+ * 
+ * @example
+ * ```typescript
+ * const signals = await computeBrowserSignals();
+ * console.log('User-Agent:', signals.userAgent);
+ * console.log('Hardware Concurrency:', signals.hardwareConcurrency);
+ * ```
+ * 
+ * @public
  */
 export async function computeBrowserSignals(): Promise<BrowserSignals> {
   const nav = getNavigatorSafe() as any;
