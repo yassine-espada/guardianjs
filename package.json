@@ -1,9 +1,18 @@
 {
   "name": "@guardianstack/guardianjs-free",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "Open-source, purely client-side browser fingerprinting library that computes a Guardian anchor-based visitor identifier.",
   "license": "MIT",
+  "author": "GuardianStack",
+  "homepage": "https://github.com/guardianstack/guardianjs#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guardianstack/guardianjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/guardianstack/guardianjs/issues"
+  },
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +20,8 @@
   "files": [
     "dist",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "keywords": [
     "fraud",
