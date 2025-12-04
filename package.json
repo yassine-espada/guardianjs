@@ -1,6 +1,6 @@
 {
   "name": "@guardianstack/guardianjs-free",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "description": "Open-source, purely client-side browser fingerprinting library that computes a Guardian anchor-based visitor identifier.",
   "license": "MIT",
