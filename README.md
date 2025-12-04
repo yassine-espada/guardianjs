@@ -16,7 +16,7 @@ Everything runs **entirely in the browser** – no data is sent to Guardian, and
 
 ### Demo
 
-Visit [GuardianJS Demo](https://guardianjs-demo.pages.dev) (placeholder) to see your visitor identifier.
+Visit [GuardianJS vs Guardian Pro Demo](https://demo.guardianstack.ai) to see your visitor identifier.
 
 Now, try visiting the same page in private / incognito mode and notice how the visitor identifier remains the **same**!
 
