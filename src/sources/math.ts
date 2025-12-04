@@ -1,9 +1,50 @@
+/**
+ * @fileoverview Math fingerprinting based on floating-point operation quirks
+ * 
+ * This module generates a deterministic fingerprint by executing various mathematical
+ * operations and capturing their results. Different browsers and hardware platforms
+ * may produce slightly different results due to variations in floating-point
+ * implementations, compiler optimizations, and hardware architecture.
+ * 
+ * These variations are typically very small but measurable, making them useful
+ * for device fingerprinting.
+ * 
+ * @module sources/math
+ * @see https://gitlab.torproject.org/legacy/trac/-/issues/13018
+ * @see https://bugzilla.mozilla.org/show_bug.cgi?id=531915
+ */
+
 const M = Math // To reduce the minified code size
 const fallbackFn = () => 0
 
 /**
- * @see https://gitlab.torproject.org/legacy/trac/-/issues/13018
- * @see https://bugzilla.mozilla.org/show_bug.cgi?id=531915
+ * Generates a math fingerprint by executing various mathematical operations
+ * and recording their results.
+ * 
+ * The fingerprint includes results from:
+ * - Trigonometric functions (sin, cos, tan, asin, acos, atan)
+ * - Hyperbolic functions (sinh, cosh, tanh, asinh, acosh, atanh)
+ * - Exponential and logarithmic functions (exp, expm1, log1p)
+ * - Power functions
+ * - Both native implementations and polyfill implementations
+ * 
+ * Different browsers and hardware may produce slightly different floating-point
+ * results due to implementation details, making this useful for fingerprinting.
+ * 
+ * @returns {Record<string, number>} An object mapping operation names to their numerical results.
+ * 
+ * @example
+ * ```typescript
+ * const fingerprint = getMathFingerprint();
+ * // {
+ * //   acos: 1.4455870996659827,
+ * //   acosh: 709.889355822726,
+ * //   asin: 0.12343746096704435,
+ * //   ...
+ * // }
+ * ```
+ * 
+ * @public
  */
 export default function getMathFingerprint(): Record<string, number> {
   // Native operations
