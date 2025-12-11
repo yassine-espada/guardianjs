@@ -1,12 +1,28 @@
-## GuardianJS
+<p align="center">
+  <img src="https://docs.guardianstack.ai/~gitbook/image?url=https%3A%2F%2F2591170659-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252Fj0iZplCciv5tsyDcHsM9%252Fsites%252Fsite_ybMcO%252Flogo%252FVBUIS0oHSzNfnPE8vjTO%252FTrademark-Guardian-dimensioni-piccole.svg%3Falt%3Dmedia%26token%3Dd7739b50-0ff6-4388-b7dd-55f0b20b77fb&width=260&dpr=4&quality=100&sign=23a43e03&sv=2" alt="GuardianJS Logo" width="200">
+</p>
 
-[![NPM Version](https://img.shields.io/npm/v/@guardianstack/guardianjs-free?style=flat-square&color=blue)](https://www.npmjs.com/package/@guardianstack/guardianjs-free)
-[![NPM Downloads](https://img.shields.io/npm/dm/@guardianstack/guardianjs-free?style=flat-square)](https://www.npmjs.com/package/@guardianstack/guardianjs-free)
-[![Bundle Size](https://img.shields.io/bundlephobia/minzip/@guardianstack/guardianjs-free?style=flat-square)](https://bundlephobia.com/package/@guardianstack/guardianjs-free)
-[![License](https://img.shields.io/npm/l/@guardianstack/guardianjs-free?style=flat-square)](LICENSE)
-[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+<p align="center">
+  <a href="https://www.npmjs.com/package/@guardianstack/guardianjs-free">
+    <img src="https://img.shields.io/npm/v/@guardianstack/guardianjs-free?style=flat-square&color=blue" alt="NPM Version">
+  </a>
+  <a href="https://www.npmjs.com/package/@guardianstack/guardianjs-free">
+    <img src="https://img.shields.io/npm/dm/@guardianstack/guardianjs-free?style=flat-square" alt="NPM Downloads">
+  </a>
+  <a href="https://bundlephobia.com/package/@guardianstack/guardianjs-free">
+    <img src="https://img.shields.io/bundlephobia/minzip/@guardianstack/guardianjs-free?style=flat-square" alt="Bundle Size">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/npm/l/@guardianstack/guardianjs-free?style=flat-square" alt="License">
+  </a>
+  <a href="https://www.typescriptlang.org/">
+    <img src="https://img.shields.io/badge/TypeScript-Ready-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
+  </a>
+</p>
 
-Open-source, purely client-side browser fingerprinting that computes a stable **anchor-based visitor identifier** without any API keys or backend calls.
+<p align="center">
+  Open-source, purely client-side browser fingerprinting that computes a stable <strong>anchor-based visitor identifier</strong> without any API keys or backend calls.
+</p>
 
 ### What is GuardianJS?
 
@@ -43,15 +59,15 @@ yarn add @guardianstack/guardianjs-free
 GuardianJS mirrors the ergonomics of popular fingerprinting libraries: you **load** the agent once, then **get** the visitor identifier when needed.
 
 ```ts
-import GuardianJS from '@guardianstack/guardianjs-free';
+import GuardianJS from "@guardianstack/guardianjs-free";
 
 // Initialize GuardianJS at application startup
 const guardianPromise = GuardianJS.load({ debug: false });
 
 // Later, when you need a visitor identifier
 guardianPromise
-  .then(agent => agent.get())
-  .then(result => {
+  .then((agent) => agent.get())
+  .then((result) => {
     // Stable, anchor-based visitor identifier
     const visitorId = result.visitorId;
 
@@ -61,7 +77,7 @@ guardianPromise
     // Full browser signals as collected by the Guardian JS Agent
     const signals = result.signals;
 
-    console.log('visitorId', visitorId);
+    console.log("visitorId", visitorId);
   });
 ```
 
@@ -94,6 +110,7 @@ The main difference between GuardianJS Free and **Guardian Pro** lies in the num
 Guardian Pro is a **closed-source, commercial** device intelligence platform designed to prevent fraud and improve user experiences. It is an enhanced version of the open-source strategy and has been fully re-designed to solve the most challenging identification use cases.
 
 Unlike GuardianJS Free, Guardian Pro achieves **industry-leading accuracy** because it:
+
 - Processes browser attributes on the server to verify integrity.
 - Analyzes vast amounts of auxiliary data (IP addresses, ASN, network routes, time-of-visit patterns).
 - Uses advanced fuzzy matching to reliably deduplicate different visitors that have identical devices.
@@ -105,28 +122,28 @@ Guardian Pro is available for Web and native platforms. You can easily get start
 
 The table below compares and contrasts these two products:
 
-| Feature | GuardianJS Free | Guardian Pro |
-| :--- | :---: | :---: |
-| **Core Identification** | | |
-| Basic signals (screen, OS, device) | ✓ | ✓ |
-| Advanced signals (canvas, audio, fonts, WebGL) | - | ✓ |
-| **Smart Signals (Output)** | | |
-| Bot detection & automation scoring | - | ✓ |
-| VPN / Proxy / Tor detection | - | ✓ |
-| Browser tampering detection | - | ✓ |
-| Incognito mode detection | - | ✓ |
-| **Identifier Properties** | | |
-| ID Type | Hash of local attributes | Server-verified VisitorID |
-| ID Lifetime | Weeks (unstable on updates) | Months / Years |
-| ID Origin | Client-side only | Server-issued |
-| ID Collisions | Common on similar devices | Very rare |
-| **Advanced Features** | | |
-| Webhooks & Realtime API | - | ✓ |
-| Geolocation (IP-based) | - | ✓ |
-| Risk Scoring & Trust Labels | - | ✓ |
-| **Operations** | | |
-| Data Security | Your responsibility | Encrypted at rest |
-| Support | GitHub Issues | Dedicated Support |
+| Feature                                        |       GuardianJS Free       |       Guardian Pro        |
+| :--------------------------------------------- | :-------------------------: | :-----------------------: |
+| **Core Identification**                        |                             |                           |
+| Basic signals (screen, OS, device)             |              ✓              |             ✓             |
+| Advanced signals (canvas, audio, fonts, WebGL) |              -              |             ✓             |
+| **Smart Signals (Output)**                     |                             |                           |
+| Bot detection & automation scoring             |              -              |             ✓             |
+| VPN / Proxy / Tor detection                    |              -              |             ✓             |
+| Browser tampering detection                    |              -              |             ✓             |
+| Incognito mode detection                       |              -              |             ✓             |
+| **Identifier Properties**                      |                             |                           |
+| ID Type                                        |  Hash of local attributes   | Server-verified VisitorID |
+| ID Lifetime                                    | Weeks (unstable on updates) |      Months / Years       |
+| ID Origin                                      |      Client-side only       |       Server-issued       |
+| ID Collisions                                  |  Common on similar devices  |         Very rare         |
+| **Advanced Features**                          |                             |                           |
+| Webhooks & Realtime API                        |              -              |             ✓             |
+| Geolocation (IP-based)                         |              -              |             ✓             |
+| Risk Scoring & Trust Labels                    |              -              |             ✓             |
+| **Operations**                                 |                             |                           |
+| Data Security                                  |     Your responsibility     |     Encrypted at rest     |
+| Support                                        |        GitHub Issues        |     Dedicated Support     |
 
 👉 **If you care about minimizing false positives and reliably catching bad actors, Guardian Pro is what you want in production.**
 
